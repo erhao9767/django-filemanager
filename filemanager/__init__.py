@@ -376,7 +376,7 @@ class FileManager(object):
         }
         os.chdir(self.basepath)
         for directory, directories, files in os.walk('.'):
-            directory_list = directory[1:].split('/')
+            directory_list = directory[1:].split(os.sep)
             current_dir = None
             nextdirs = dir_structure
             for d in directory_list:
